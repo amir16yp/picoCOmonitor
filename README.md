@@ -19,7 +19,7 @@ The Gas Leakage Monitoring System (picoCOmonitor) is a project that utilizes a R
 4. Open the `config.json` file and fill in the necessary configuration parameters as explained in the "config.json Guide" section below. 
 5. Save the `config.json` file with the appropriate values.
 ### picoCOmonitor Server 
-1. Install Python and then Flask abd waitress on your server machine:
+1. Install Python and then Flask and waitress on your server machine:
 ```
 pip install Flask waitress
 ``` 
