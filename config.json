@@ -2,7 +2,7 @@
   "wifi_ssid": "",
   "wifi_pass": "",
   "server_ip": "",
-  "server_port": "",
+  "server_port": "8080",
   "discord_webhook_url": "",
   "update_pace_seconds": 1
 }
