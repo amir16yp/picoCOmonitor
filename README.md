@@ -8,7 +8,7 @@ The Gas Leakage Monitoring System (picoCOmonitor) is a project that utilizes a R
 1. Connect the MQ7 Gas Sensor to the Raspberry Pi Pico W as follows:
 - MQ7 VCC: Connect to Pico W 3V3 (3.3V).
 - MQ7 GND: Connect to Pico W GND (Ground).
-- MQ7 AO (Analog Output): Connect to ADC input pin (ADC_PIN = 2 in the Pico W code).
+- MQ7 AO (Analog Output): Connect to ADC input pin (ADC_PIN = 2 (GPIO pin 28) in the Pico W code).
 - MQ7 DO (Digital Output): Connect to DIN input pin (DIN_PIN = 16 in the Pico W code). 
 2. Ensure that the Raspberry Pi Pico W is properly connected to your computer or power source via USB.
 ## Software Setup
