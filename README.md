@@ -114,7 +114,7 @@ For more details on how to use the API endpoints, refer to the "API Endpoints" s
 - Place the gas sensor in a suitable location to detect gas leaks effectively. 
 - Be cautious when dealing with potential gas leakage scenarios, and follow appropriate safety guidelines.
 ## Customization 
-- You can customize the monitoring intervals, gas concentration thresholds, and other parameters in the `config.json` file to suit your specific requirements. 
+- You can customize the monitoring intervals, WiFi authentication details, and other paramters in the `config.json` file to suit your specific requirements. 
 - For advanced customization and additional functionality, you can extend the Flask application by adding more endpoints or integrating other data analysis libraries.---
 
 Feel free to add any additional information or instructions related to the Gas Leakage Monitoring System in this README file.
