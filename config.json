@@ -1,0 +1,8 @@
+{
+  "wifi_ssid": "",
+  "wifi_pass": "",
+  "server_ip": "",
+  "server_port": "",
+  "discord_webhook_url": "",
+  "update_pace_seconds": 1
+}
