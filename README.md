@@ -30,7 +30,7 @@ pip install Flask waitress
 ```
 python server.py
 ```
-By default, the server will run on `http://0.0.0.0:8080`. If you want to specify a different host and port, you can use the optional command-line arguments as shown in the server code.
+By default, the server will run on `http://0.0.0.0:8888`. If you want to specify a different host and port, you can use the optional command-line arguments as shown in the server code.
 ## Configuration (config.json) Guide
 
 The `config.json` file contains settings for configuring the Gas Leakage Monitoring System on the Raspberry Pi Pico W. Before running the main script, ensure that you correctly configure the `config.json` file with the appropriate values. Below is a detailed explanation of each configuration parameter: 
@@ -101,14 +101,11 @@ This parameter sets the time interval between consecutive updates of gas concent
 
 The picoCOmonitor server provides the following API endpoints: 
 - `/co` (GET): Allows the Raspberry Pi Pico W to record CO events by sending gas concentration data to the server. 
-- `/costats` (GET): Retrieves the recorded CO statistics in JSON format. 
 - `/costats.png` (GET): Plots the CO events over time and returns the plot as a PNG image.
-
-For more details on how to use the API endpoints, refer to the "API Endpoints" section in the server code.
+- `/?i=<int>` the dashboard. the GET argument "i" represents a number that is the time difference between each timestamp, in minutes. default is 1 if not specified.
+- there's more but i'll get around to documentation on them late. For now you can just check the source code.
 ## Monitoring and Analysis 
-- Monitor the gas concentration data received by the server by visiting the appropriate endpoints (e.g., `/costats`) in your web browser. The data will be displayed in JSON format. 
-- For visual analysis, access the `/costats.png` endpoint in your web browser. The plotted graph will show the gas concentration values over time. 
-- Download the JSON file containing the CO events from the server for further analysis. The events are stored in the `co_events.json` file.
+- Monitor the gas concentration data received by the server by visiting the dashboard (at the `/` endpoint).
 ## Safety Precautions 
 - Handle the MQ7 gas sensor with care, and avoid exposure to gases that could be harmful. 
 - Place the gas sensor in a suitable location to detect gas leaks effectively. 
