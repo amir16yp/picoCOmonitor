@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CO Events Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .compact {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+    <script>
+        function updateGraph() {
+            var startTimestampSelect = document.getElementById('start-timestamp');
+            var endTimestampSelect = document.getElementById('end-timestamp');
+
+            var selectedStartTimestamp = startTimestampSelect.value;
+            var selectedEndTimestamp = endTimestampSelect.value;
+
+            // Construct the URL based on the selected timestamps
+            var imageUrl = "/generate_graph?start_timestamp=" + encodeURIComponent(selectedStartTimestamp) +
+                        "&end_timestamp=" + encodeURIComponent(selectedEndTimestamp);
+
+            // Update the image source with the new URL
+            var graphImage = document.getElementById('graph-image');
+            graphImage.src = imageUrl;
+        }
+    </script>
+</head>
+<body>
+    <h1>CO Events Dashboard</h1>
+
+    <div class="compact">
+        <form id="timestamp-form" action="{{ url_for('generate_graph') }}" method="get">
+            <label for="start-timestamp">Start Timestamp: </label>
+            <select id="start-timestamp" name="start_timestamp">
+                {% for event in events %}
+                    <option class="timestamp" value="{{ event.timestamp }}">{{ event.formatted_timestamp }}</option>
+                {% endfor %}
+            </select>
+            <label for="end-timestamp">End Timestamp: </label>
+            <select id="end-timestamp" name="end_timestamp">
+                {% for event in events %}
+                    <option class="timestamp" value="{{ event.timestamp }}">{{ event.formatted_timestamp }}</option>
+                {% endfor %}
+            </select>
+            <button type="button" onclick="updateGraph();">Generate Custom Graph</button>
+        </form>
+    </div>
+
+    <div>
+        <img id="graph-image" src="/default_graph.png" alt="Graph Image">
+    </div>
+</body>
+</html>
+
