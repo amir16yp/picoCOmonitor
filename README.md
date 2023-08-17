@@ -69,7 +69,7 @@ This parameter determines the IP address of the server where you want to receive
 
 **Example** : `"server_port": "8888"`
 
-This parameter specifies the port number on the server where the system should send gas concentration data. Replace the example `"8080"` with the appropriate port number on your server. 
+This parameter specifies the port number on the server where the system should send gas concentration data. Replace the example `"8888"` with the appropriate port number on your server. 
 - `discord_webhook_url`: The Discord Webhook URL that allows the system to send a notification to a Discord channel when gas leakage is detected.
 
 **Description** : The Discord Webhook URL that allows the system to send a notification to a Discord channel when gas leakage is detected.
