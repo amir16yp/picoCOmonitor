@@ -1,7 +1,8 @@
 # Gas Leakage Monitoring System with Raspberry Pi Pico W (picoCOmonitor)
 
-**CO (pun intended) author: ChatGPT** 
-![Screenshot from a few hours of usage](https://cdn.discordapp.com/attachments/620053809720328193/1133854334778609816/image.png)
+**CO (pun intended) author: ChatGPT**
+![image](https://github.com/amir16yp/picoCOmonitor/assets/96111605/640f14af-9fdc-4f82-b35e-bf0ae08d0a95)
+![image](https://github.com/amir16yp/picoCOmonitor/assets/96111605/5e85609a-232d-4d56-88ca-c9eb8b685c87)
 
 The Gas Leakage Monitoring System (picoCOmonitor) is a project that utilizes a Raspberry Pi Pico W and an MQ7 gas sensor to monitor carbon monoxide (CO) levels. The system sends the measured gas concentration data to a server for visualization and analysis. This repository contains code for both the gas leakage monitoring system (on the Pico W) and the server to process and display the data.
 ## Hardware Setup 
